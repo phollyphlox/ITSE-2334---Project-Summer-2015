@@ -22,7 +22,6 @@ Partial Class HomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -34,21 +33,12 @@ Partial Class HomePage
         Me.CustumersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddNewInventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateInventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchInventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.CarRentalAppProject.My.Resources.Resources.Car
-        Me.PictureBox1.Location = New System.Drawing.Point(185, 110)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(360, 306)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -104,14 +94,14 @@ Partial Class HomePage
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.UpdateRentalToolStripMenuItem.Text = "Update Rental"
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.UpdateRentalToolStripMenuItem.Text = "Search Rental"
         '
         'CustumersToolStripMenuItem
         '
@@ -128,28 +118,31 @@ Partial Class HomePage
         '
         'InventoryToolStripMenuItem
         '
-        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewInventoryToolStripMenuItem, Me.UpdateInventoryToolStripMenuItem, Me.SearchInventoryToolStripMenuItem})
+        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateInventoryToolStripMenuItem, Me.SearchInventoryToolStripMenuItem})
         Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
         Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.InventoryToolStripMenuItem.Text = "Inventory"
         '
-        'AddNewInventoryToolStripMenuItem
-        '
-        Me.AddNewInventoryToolStripMenuItem.Name = "AddNewInventoryToolStripMenuItem"
-        Me.AddNewInventoryToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
-        Me.AddNewInventoryToolStripMenuItem.Text = "Add New Inventory"
-        '
         'UpdateInventoryToolStripMenuItem
         '
         Me.UpdateInventoryToolStripMenuItem.Name = "UpdateInventoryToolStripMenuItem"
-        Me.UpdateInventoryToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.UpdateInventoryToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.UpdateInventoryToolStripMenuItem.Text = "Update Inventory"
         '
         'SearchInventoryToolStripMenuItem
         '
         Me.SearchInventoryToolStripMenuItem.Name = "SearchInventoryToolStripMenuItem"
-        Me.SearchInventoryToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.SearchInventoryToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.SearchInventoryToolStripMenuItem.Text = "Search Inventory"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CarRentalAppProject.My.Resources.Resources.Car
+        Me.PictureBox1.Location = New System.Drawing.Point(185, 110)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(360, 306)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'HomePage
         '
@@ -163,9 +156,9 @@ Partial Class HomePage
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "HomePage"
         Me.Text = "HomePage"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -182,7 +175,6 @@ Partial Class HomePage
     Friend WithEvents CustumersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AddNewInventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateInventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SearchInventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
