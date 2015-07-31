@@ -70,6 +70,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerInfo.Designer.vb">
+      <DependentUpon>CustomerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerUpdate.Designer.vb">
+      <DependentUpon>CustomerUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalizeInvoice.Designer.vb">
+      <DependentUpon>FinalizeInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinalizeInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HomePage.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -92,10 +110,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewRental.Designer.vb">
+      <DependentUpon>NewRental.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewRental.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewRentalVehicleList.Designer.vb">
+      <DependentUpon>NewRentalVehicleList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewRentalVehicleList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="new_Maverick_Car_RentalDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentInvoice.Designer.vb">
+      <DependentUpon>PaymentInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceOptions.Designer.vb">
+      <DependentUpon>PriceOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PriceOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental Update.Designer.vb">
+      <DependentUpon>Rental Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rental Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalCancel.Designer.vb">
+      <DependentUpon>RentalCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RentalCancel.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateCustomerForm.Designer.vb">
       <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
@@ -107,6 +161,12 @@
       <DependentUpon>UpdateInventoryForm.vb</DependentUpon>
     </Compile>
     <Compile Include="UpdateInventoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles.Designer.vb">
+      <DependentUpon>Vehicles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

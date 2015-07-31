@@ -29,3 +29,7 @@ C:\Users\zombie\Desktop\ITSE-2334---Project-Summer-2015\CarRentalAppProject\bin\
 C:\Users\zombie\Desktop\ITSE-2334---Project-Summer-2015\CarRentalAppProject\obj\Debug\CarRentalAppProject.exe
 C:\Users\zombie\Desktop\ITSE-2334---Project-Summer-2015\CarRentalAppProject\obj\Debug\CarRentalAppProject.xml
 C:\Users\zombie\Desktop\ITSE-2334---Project-Summer-2015\CarRentalAppProject\obj\Debug\CarRentalAppProject.pdb
+C:\Users\Larry\Source\Repos\ITSE-2334---Project-Summer-2015\CarRentalAppProject\bin\Debug\CarRentalAppProject.exe.config
+C:\Users\Larry\Source\Repos\ITSE-2334---Project-Summer-2015\CarRentalAppProject\obj\Debug\CarRentalAppProject.exe
+C:\Users\Larry\Source\Repos\ITSE-2334---Project-Summer-2015\CarRentalAppProject\obj\Debug\CarRentalAppProject.xml
+C:\Users\Larry\Source\Repos\ITSE-2334---Project-Summer-2015\CarRentalAppProject\obj\Debug\CarRentalAppProject.pdb
