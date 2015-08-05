@@ -116,6 +116,7 @@
     <Compile Include="NewRental.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewPaymentInv.vb" />
     <Compile Include="NewRentalVehicleList.Designer.vb">
       <DependentUpon>NewRentalVehicleList.vb</DependentUpon>
     </Compile>
@@ -151,18 +152,6 @@
     <Compile Include="RentalCancel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateCustomerForm.Designer.vb">
-      <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateCustomerForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateInventoryForm.Designer.vb">
-      <DependentUpon>UpdateInventoryForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateInventoryForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Vehicles.Designer.vb">
       <DependentUpon>Vehicles.vb</DependentUpon>
     </Compile>
@@ -180,11 +169,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateCustomerForm.resx">
-      <DependentUpon>UpdateCustomerForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInventoryForm.resx">
-      <DependentUpon>UpdateInventoryForm.vb</DependentUpon>
+    <EmbeddedResource Include="PaymentInvoice.resx">
+      <DependentUpon>PaymentInvoice.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

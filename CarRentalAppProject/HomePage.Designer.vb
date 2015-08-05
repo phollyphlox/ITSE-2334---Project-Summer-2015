@@ -24,20 +24,22 @@ Partial Class HomePage
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CustumersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UpdateInventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SearchInventoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MenuStrip1.SuspendLayout()
+        Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateCustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewVehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PriceOptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewPriceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,13 +64,22 @@ Partial Class HomePage
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "We get you there fast"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.CarRentalAppProject.My.Resources.Resources.Car
+        Me.PictureBox1.Location = New System.Drawing.Point(185, 110)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(360, 306)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.RentalToolStripMenuItem, Me.CustumersToolStripMenuItem, Me.InventoryToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HomeToolStripMenuItem, Me.RentalToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.PriceOptionsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(730, 24)
-        Me.MenuStrip1.TabIndex = 3
+        Me.MenuStrip1.TabIndex = 46
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
@@ -81,8 +92,14 @@ Partial Class HomePage
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'RentalToolStripMenuItem
         '
@@ -94,71 +111,68 @@ Partial Class HomePage
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.UpdateRentalToolStripMenuItem.Text = "Search Rental"
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UpdateRentalToolStripMenuItem.Text = "Update Rental"
         '
-        'CustumersToolStripMenuItem
+        'CustomersToolStripMenuItem
         '
-        Me.CustumersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateCustomerToolStripMenuItem})
-        Me.CustumersToolStripMenuItem.Name = "CustumersToolStripMenuItem"
-        Me.CustumersToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
-        Me.CustumersToolStripMenuItem.Text = "Customers"
+        Me.CustomersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateCustomersToolStripMenuItem})
+        Me.CustomersToolStripMenuItem.Name = "CustomersToolStripMenuItem"
+        Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.CustomersToolStripMenuItem.Text = "Customers"
         '
-        'UpdateCustomerToolStripMenuItem
+        'UpdateCustomersToolStripMenuItem
         '
-        Me.UpdateCustomerToolStripMenuItem.Name = "UpdateCustomerToolStripMenuItem"
-        Me.UpdateCustomerToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.UpdateCustomerToolStripMenuItem.Text = "Update Customer"
+        Me.UpdateCustomersToolStripMenuItem.Name = "UpdateCustomersToolStripMenuItem"
+        Me.UpdateCustomersToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.UpdateCustomersToolStripMenuItem.Text = "Update Customers"
         '
-        'InventoryToolStripMenuItem
+        'VehiclesToolStripMenuItem
         '
-        Me.InventoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateInventoryToolStripMenuItem, Me.SearchInventoryToolStripMenuItem})
-        Me.InventoryToolStripMenuItem.Name = "InventoryToolStripMenuItem"
-        Me.InventoryToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
-        Me.InventoryToolStripMenuItem.Text = "Inventory"
+        Me.VehiclesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewVehiclesToolStripMenuItem})
+        Me.VehiclesToolStripMenuItem.Name = "VehiclesToolStripMenuItem"
+        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.VehiclesToolStripMenuItem.Text = "Vehicles"
         '
-        'UpdateInventoryToolStripMenuItem
+        'AddNewVehiclesToolStripMenuItem
         '
-        Me.UpdateInventoryToolStripMenuItem.Name = "UpdateInventoryToolStripMenuItem"
-        Me.UpdateInventoryToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.UpdateInventoryToolStripMenuItem.Text = "Update Inventory"
+        Me.AddNewVehiclesToolStripMenuItem.Name = "AddNewVehiclesToolStripMenuItem"
+        Me.AddNewVehiclesToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
+        Me.AddNewVehiclesToolStripMenuItem.Text = "Vehicles List/Add/Update"
         '
-        'SearchInventoryToolStripMenuItem
+        'PriceOptionsToolStripMenuItem
         '
-        Me.SearchInventoryToolStripMenuItem.Name = "SearchInventoryToolStripMenuItem"
-        Me.SearchInventoryToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.SearchInventoryToolStripMenuItem.Text = "Search Inventory"
+        Me.PriceOptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewPriceToolStripMenuItem})
+        Me.PriceOptionsToolStripMenuItem.Name = "PriceOptionsToolStripMenuItem"
+        Me.PriceOptionsToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
+        Me.PriceOptionsToolStripMenuItem.Text = "Price Options"
         '
-        'PictureBox1
+        'AddNewPriceToolStripMenuItem
         '
-        Me.PictureBox1.Image = Global.CarRentalAppProject.My.Resources.Resources.Car
-        Me.PictureBox1.Location = New System.Drawing.Point(185, 110)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(360, 306)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.AddNewPriceToolStripMenuItem.Name = "AddNewPriceToolStripMenuItem"
+        Me.AddNewPriceToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.AddNewPriceToolStripMenuItem.Text = "Price List/Add/Update"
         '
         'HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(730, 509)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "HomePage"
         Me.Text = "HomePage"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -169,13 +183,15 @@ Partial Class HomePage
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewRentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateRentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CustumersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UpdateCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents InventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents UpdateInventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SearchInventoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CustomersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateCustomersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VehiclesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AddNewVehiclesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PriceOptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AddNewPriceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
