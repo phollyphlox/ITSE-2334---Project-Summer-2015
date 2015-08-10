@@ -70,6 +70,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.vb" />
+    <Compile Include="CustomerAdd.Designer.vb">
+      <DependentUpon>CustomerAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerInfo.Designer.vb">
       <DependentUpon>CustomerInfo.vb</DependentUpon>
     </Compile>
@@ -128,6 +135,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="new_Maverick_Car_RentalDataSet.vb">
+      <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PaymentInvoice.Designer.vb">
       <DependentUpon>PaymentInvoice.vb</DependentUpon>
     </Compile>
@@ -160,6 +170,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CustomerAdd.resx">
+      <DependentUpon>CustomerAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerUpdate.resx">
+      <DependentUpon>CustomerUpdate.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
     </EmbeddedResource>
@@ -188,7 +207,7 @@
   <ItemGroup>
     <Content Include="Images\Car.jpg" />
     <Content Include="new Maverick Car Rental.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="new_Maverick_Car_RentalDataSet.xsc">
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>

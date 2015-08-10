@@ -22,14 +22,14 @@ Partial Class frmCustomerInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txtDriverLic = New System.Windows.Forms.TextBox()
         Me.lblDriversLic = New System.Windows.Forms.Label()
-        Me.txtState = New System.Windows.Forms.TextBox()
         Me.lblState = New System.Windows.Forms.Label()
         Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.tstFirstName = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.lblMidInit = New System.Windows.Forms.Label()
-        Me.tstMiddleInitial = New System.Windows.Forms.TextBox()
+        Me.txtMiddleInitial = New System.Windows.Forms.TextBox()
         Me.lblLastName = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.lblAddress = New System.Windows.Forms.Label()
@@ -39,30 +39,37 @@ Partial Class frmCustomerInfo
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateCustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceOptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblCustInfoPageHdr = New System.Windows.Forms.Label()
         Me.lblZip = New System.Windows.Forms.Label()
         Me.txtZip = New System.Windows.Forms.TextBox()
         Me.lblDriverInfo = New System.Windows.Forms.Label()
-        Me.lblLicState = New System.Windows.Forms.Label()
-        Me.txtLicState = New System.Windows.Forms.TextBox()
         Me.lblDriverDOB = New System.Windows.Forms.Label()
-        Me.dtpDriverDOB = New System.Windows.Forms.DateTimePicker()
         Me.btnContinue = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblCarRentalApp = New System.Windows.Forms.Label()
         Me.cmbCustomersList = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAddNewCustomer = New System.Windows.Forms.Button()
+        Me.cmbLicState = New System.Windows.Forms.ComboBox()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.New_Maverick_Car_RentalDataSet = New CarRentalAppProject.new_Maverick_Car_RentalDataSet()
+        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CustomerTableAdapter = New CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.CustomerTableAdapter()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.lblPhone = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.New_Maverick_Car_RentalDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDriverLic
         '
-        Me.txtDriverLic.Location = New System.Drawing.Point(390, 268)
+        Me.txtDriverLic.Location = New System.Drawing.Point(390, 303)
         Me.txtDriverLic.Name = "txtDriverLic"
         Me.txtDriverLic.Size = New System.Drawing.Size(100, 20)
         Me.txtDriverLic.TabIndex = 15
@@ -70,23 +77,16 @@ Partial Class frmCustomerInfo
         'lblDriversLic
         '
         Me.lblDriversLic.AutoSize = True
-        Me.lblDriversLic.Location = New System.Drawing.Point(286, 275)
+        Me.lblDriversLic.Location = New System.Drawing.Point(283, 310)
         Me.lblDriversLic.Name = "lblDriversLic"
         Me.lblDriversLic.Size = New System.Drawing.Size(83, 13)
         Me.lblDriversLic.TabIndex = 14
         Me.lblDriversLic.Text = "Drivers License:"
         '
-        'txtState
-        '
-        Me.txtState.Location = New System.Drawing.Point(316, 194)
-        Me.txtState.Name = "txtState"
-        Me.txtState.Size = New System.Drawing.Size(30, 20)
-        Me.txtState.TabIndex = 11
-        '
         'lblState
         '
         Me.lblState.AutoSize = True
-        Me.lblState.Location = New System.Drawing.Point(275, 201)
+        Me.lblState.Location = New System.Drawing.Point(209, 197)
         Me.lblState.Name = "lblState"
         Me.lblState.Size = New System.Drawing.Size(35, 13)
         Me.lblState.TabIndex = 10
@@ -101,12 +101,12 @@ Partial Class frmCustomerInfo
         Me.lblFirstName.TabIndex = 0
         Me.lblFirstName.Text = "First Name:"
         '
-        'tstFirstName
+        'txtFirstName
         '
-        Me.tstFirstName.Location = New System.Drawing.Point(246, 72)
-        Me.tstFirstName.Name = "tstFirstName"
-        Me.tstFirstName.Size = New System.Drawing.Size(100, 20)
-        Me.tstFirstName.TabIndex = 1
+        Me.txtFirstName.Location = New System.Drawing.Point(246, 72)
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(100, 20)
+        Me.txtFirstName.TabIndex = 1
         '
         'lblMidInit
         '
@@ -117,12 +117,12 @@ Partial Class frmCustomerInfo
         Me.lblMidInit.TabIndex = 2
         Me.lblMidInit.Text = "Middle Initial:"
         '
-        'tstMiddleInitial
+        'txtMiddleInitial
         '
-        Me.tstMiddleInitial.Location = New System.Drawing.Point(373, 72)
-        Me.tstMiddleInitial.Name = "tstMiddleInitial"
-        Me.tstMiddleInitial.Size = New System.Drawing.Size(27, 20)
-        Me.tstMiddleInitial.TabIndex = 3
+        Me.txtMiddleInitial.Location = New System.Drawing.Point(373, 72)
+        Me.txtMiddleInitial.Name = "txtMiddleInitial"
+        Me.txtMiddleInitial.Size = New System.Drawing.Size(27, 20)
+        Me.txtMiddleInitial.TabIndex = 3
         '
         'lblLastName
         '
@@ -191,14 +191,33 @@ Partial Class frmCustomerInfo
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'RentalToolStripMenuItem
+        '
+        Me.RentalToolStripMenuItem.Name = "RentalToolStripMenuItem"
+        Me.RentalToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.RentalToolStripMenuItem.Text = "Rental"
         '
         'CustomersToolStripMenuItem
         '
+        Me.CustomersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateCustomersToolStripMenuItem})
         Me.CustomersToolStripMenuItem.Name = "CustomersToolStripMenuItem"
         Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
         Me.CustomersToolStripMenuItem.Text = "Customers"
+        '
+        'UpdateCustomersToolStripMenuItem
+        '
+        Me.UpdateCustomersToolStripMenuItem.Name = "UpdateCustomersToolStripMenuItem"
+        Me.UpdateCustomersToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.UpdateCustomersToolStripMenuItem.Text = "Update Customers"
+        '
+        'VehiclesToolStripMenuItem
+        '
+        Me.VehiclesToolStripMenuItem.Name = "VehiclesToolStripMenuItem"
+        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.VehiclesToolStripMenuItem.Text = "Vehicles"
         '
         'PriceOptionsToolStripMenuItem
         '
@@ -234,45 +253,20 @@ Partial Class frmCustomerInfo
         'lblDriverInfo
         '
         Me.lblDriverInfo.AutoSize = True
-        Me.lblDriverInfo.Location = New System.Drawing.Point(243, 239)
+        Me.lblDriverInfo.Location = New System.Drawing.Point(242, 272)
         Me.lblDriverInfo.Name = "lblDriverInfo"
         Me.lblDriverInfo.Size = New System.Drawing.Size(135, 13)
         Me.lblDriverInfo.TabIndex = 46
         Me.lblDriverInfo.Text = "Drivers License Information"
         '
-        'lblLicState
-        '
-        Me.lblLicState.AutoSize = True
-        Me.lblLicState.Location = New System.Drawing.Point(331, 318)
-        Me.lblLicState.Name = "lblLicState"
-        Me.lblLicState.Size = New System.Drawing.Size(35, 13)
-        Me.lblLicState.TabIndex = 47
-        Me.lblLicState.Text = "State:"
-        '
-        'txtLicState
-        '
-        Me.txtLicState.Location = New System.Drawing.Point(390, 311)
-        Me.txtLicState.Name = "txtLicState"
-        Me.txtLicState.Size = New System.Drawing.Size(100, 20)
-        Me.txtLicState.TabIndex = 48
-        '
         'lblDriverDOB
         '
         Me.lblDriverDOB.AutoSize = True
-        Me.lblDriverDOB.Location = New System.Drawing.Point(297, 361)
+        Me.lblDriverDOB.Location = New System.Drawing.Point(313, 347)
         Me.lblDriverDOB.Name = "lblDriverDOB"
-        Me.lblDriverDOB.Size = New System.Drawing.Size(69, 13)
+        Me.lblDriverDOB.Size = New System.Drawing.Size(29, 13)
         Me.lblDriverDOB.TabIndex = 49
-        Me.lblDriverDOB.Text = "Date of Birth:"
-        '
-        'dtpDriverDOB
-        '
-        Me.dtpDriverDOB.CustomFormat = "MM/dd/yyyy h:mm tt"
-        Me.dtpDriverDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDriverDOB.Location = New System.Drawing.Point(390, 354)
-        Me.dtpDriverDOB.Name = "dtpDriverDOB"
-        Me.dtpDriverDOB.Size = New System.Drawing.Size(149, 20)
-        Me.dtpDriverDOB.TabIndex = 50
+        Me.lblDriverDOB.Text = "Age:"
         '
         'btnContinue
         '
@@ -292,18 +286,6 @@ Partial Class frmCustomerInfo
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'RentalToolStripMenuItem
-        '
-        Me.RentalToolStripMenuItem.Name = "RentalToolStripMenuItem"
-        Me.RentalToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.RentalToolStripMenuItem.Text = "Rental"
-        '
-        'VehiclesToolStripMenuItem
-        '
-        Me.VehiclesToolStripMenuItem.Name = "VehiclesToolStripMenuItem"
-        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.VehiclesToolStripMenuItem.Text = "Vehicles"
-        '
         'lblCarRentalApp
         '
         Me.lblCarRentalApp.AutoSize = True
@@ -318,7 +300,7 @@ Partial Class frmCustomerInfo
         Me.cmbCustomersList.FormattingEnabled = True
         Me.cmbCustomersList.Location = New System.Drawing.Point(24, 96)
         Me.cmbCustomersList.Name = "cmbCustomersList"
-        Me.cmbCustomersList.Size = New System.Drawing.Size(148, 21)
+        Me.cmbCustomersList.Size = New System.Drawing.Size(166, 21)
         Me.cmbCustomersList.TabIndex = 54
         '
         'Label1
@@ -332,28 +314,74 @@ Partial Class frmCustomerInfo
         '
         'btnAddNewCustomer
         '
-        Me.btnAddNewCustomer.Location = New System.Drawing.Point(160, 396)
+        Me.btnAddNewCustomer.Location = New System.Drawing.Point(132, 396)
         Me.btnAddNewCustomer.Name = "btnAddNewCustomer"
         Me.btnAddNewCustomer.Size = New System.Drawing.Size(112, 23)
         Me.btnAddNewCustomer.TabIndex = 56
         Me.btnAddNewCustomer.Text = "Add New Customer"
         Me.btnAddNewCustomer.UseVisualStyleBackColor = True
         '
+        'cmbLicState
+        '
+        Me.cmbLicState.FormattingEnabled = True
+        Me.cmbLicState.Location = New System.Drawing.Point(245, 194)
+        Me.cmbLicState.Name = "cmbLicState"
+        Me.cmbLicState.Size = New System.Drawing.Size(121, 21)
+        Me.cmbLicState.TabIndex = 58
+        '
+        'txtAge
+        '
+        Me.txtAge.Location = New System.Drawing.Point(390, 344)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.Size = New System.Drawing.Size(100, 20)
+        Me.txtAge.TabIndex = 59
+        '
+        'New_Maverick_Car_RentalDataSet
+        '
+        Me.New_Maverick_Car_RentalDataSet.DataSetName = "new_Maverick_Car_RentalDataSet"
+        Me.New_Maverick_Car_RentalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CustomerBindingSource
+        '
+        Me.CustomerBindingSource.DataMember = "Customer"
+        Me.CustomerBindingSource.DataSource = Me.New_Maverick_Car_RentalDataSet
+        '
+        'CustomerTableAdapter
+        '
+        Me.CustomerTableAdapter.ClearBeforeFill = True
+        '
+        'txtPhone
+        '
+        Me.txtPhone.Location = New System.Drawing.Point(321, 233)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(147, 20)
+        Me.txtPhone.TabIndex = 85
+        '
+        'lblPhone
+        '
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.Location = New System.Drawing.Point(222, 236)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(81, 13)
+        Me.lblPhone.TabIndex = 84
+        Me.lblPhone.Text = "Phone Number:"
+        '
         'frmCustomerInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 431)
+        Me.Controls.Add(Me.txtPhone)
+        Me.Controls.Add(Me.lblPhone)
+        Me.Controls.Add(Me.txtAge)
+        Me.Controls.Add(Me.cmbLicState)
         Me.Controls.Add(Me.btnAddNewCustomer)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbCustomersList)
         Me.Controls.Add(Me.lblCarRentalApp)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnContinue)
-        Me.Controls.Add(Me.dtpDriverDOB)
         Me.Controls.Add(Me.lblDriverDOB)
-        Me.Controls.Add(Me.txtLicState)
-        Me.Controls.Add(Me.lblLicState)
         Me.Controls.Add(Me.lblDriverInfo)
         Me.Controls.Add(Me.lblCustInfoPageHdr)
         Me.Controls.Add(Me.MenuStrip1)
@@ -363,12 +391,11 @@ Partial Class frmCustomerInfo
         Me.Controls.Add(Me.lblLastName)
         Me.Controls.Add(Me.lblZip)
         Me.Controls.Add(Me.lblFirstName)
-        Me.Controls.Add(Me.txtState)
-        Me.Controls.Add(Me.tstFirstName)
+        Me.Controls.Add(Me.txtFirstName)
         Me.Controls.Add(Me.lblState)
         Me.Controls.Add(Me.lblMidInit)
         Me.Controls.Add(Me.txtCity)
-        Me.Controls.Add(Me.tstMiddleInitial)
+        Me.Controls.Add(Me.txtMiddleInitial)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.lblCity)
         Me.Controls.Add(Me.lblAddress)
@@ -377,18 +404,19 @@ Partial Class frmCustomerInfo
         Me.Text = "Mavericks Car Rental Company - Customer Information"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.New_Maverick_Car_RentalDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents txtDriverLic As System.Windows.Forms.TextBox
     Friend WithEvents lblDriversLic As System.Windows.Forms.Label
-    Friend WithEvents txtState As System.Windows.Forms.TextBox
     Friend WithEvents lblState As System.Windows.Forms.Label
     Friend WithEvents lblFirstName As System.Windows.Forms.Label
-    Friend WithEvents tstFirstName As System.Windows.Forms.TextBox
+    Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents lblMidInit As System.Windows.Forms.Label
-    Friend WithEvents tstMiddleInitial As System.Windows.Forms.TextBox
+    Friend WithEvents txtMiddleInitial As System.Windows.Forms.TextBox
     Friend WithEvents lblLastName As System.Windows.Forms.Label
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
     Friend WithEvents lblAddress As System.Windows.Forms.Label
@@ -404,10 +432,7 @@ Partial Class frmCustomerInfo
     Friend WithEvents lblZip As System.Windows.Forms.Label
     Friend WithEvents txtZip As System.Windows.Forms.TextBox
     Friend WithEvents lblDriverInfo As System.Windows.Forms.Label
-    Friend WithEvents lblLicState As System.Windows.Forms.Label
-    Friend WithEvents txtLicState As System.Windows.Forms.TextBox
     Friend WithEvents lblDriverDOB As System.Windows.Forms.Label
-    Friend WithEvents dtpDriverDOB As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnContinue As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents RentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -416,4 +441,12 @@ Partial Class frmCustomerInfo
     Friend WithEvents cmbCustomersList As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnAddNewCustomer As System.Windows.Forms.Button
+    Friend WithEvents cmbLicState As System.Windows.Forms.ComboBox
+    Friend WithEvents txtAge As System.Windows.Forms.TextBox
+    Friend WithEvents UpdateCustomersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents New_Maverick_Car_RentalDataSet As CarRentalAppProject.new_Maverick_Car_RentalDataSet
+    Friend WithEvents CustomerBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CustomerTableAdapter As CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.CustomerTableAdapter
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
+    Friend WithEvents lblPhone As System.Windows.Forms.Label
 End Class

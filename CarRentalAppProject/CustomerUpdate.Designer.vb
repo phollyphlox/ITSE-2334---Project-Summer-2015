@@ -25,6 +25,7 @@ Partial Class frmCustomerUpdate
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,10 +37,7 @@ Partial Class frmCustomerUpdate
         Me.AddNewPriceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.dtpDOBCU = New System.Windows.Forms.DateTimePicker()
         Me.lblDOBCU = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.lblDLStateCU = New System.Windows.Forms.Label()
         Me.lblDriversLicInfoCU = New System.Windows.Forms.Label()
         Me.lblCustUpdate = New System.Windows.Forms.Label()
         Me.lblDriverLicCU = New System.Windows.Forms.Label()
@@ -48,19 +46,22 @@ Partial Class frmCustomerUpdate
         Me.lblLastNameCU = New System.Windows.Forms.Label()
         Me.lblZipCU = New System.Windows.Forms.Label()
         Me.lblFirstNameCU = New System.Windows.Forms.Label()
-        Me.txtStateCU = New System.Windows.Forms.TextBox()
         Me.txtFirstNameCU = New System.Windows.Forms.TextBox()
         Me.lblStateCU = New System.Windows.Forms.Label()
         Me.lblMidInitialCU = New System.Windows.Forms.Label()
         Me.txtCityCU = New System.Windows.Forms.TextBox()
         Me.txtMidInitialCU = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtLastNameCU = New System.Windows.Forms.TextBox()
         Me.lblCityCU = New System.Windows.Forms.Label()
         Me.lblAddressCU = New System.Windows.Forms.Label()
         Me.txtAddressCU = New System.Windows.Forms.TextBox()
         Me.lsbCustomers = New System.Windows.Forms.ListBox()
         Me.lblCustomersList = New System.Windows.Forms.Label()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.cmbLicState = New System.Windows.Forms.ComboBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.lblPhone = New System.Windows.Forms.Label()
+        Me.lblInfo = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,7 +70,7 @@ Partial Class frmCustomerUpdate
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HomeToolStripMenuItem, Me.RentalToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.PriceOptionsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(578, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(567, 24)
         Me.MenuStrip1.TabIndex = 46
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -83,8 +84,14 @@ Partial Class frmCustomerUpdate
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'RentalToolStripMenuItem
         '
@@ -96,19 +103,19 @@ Partial Class frmCustomerUpdate
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.UpdateRentalToolStripMenuItem.Text = "Update Rental"
         '
         'SearchRentalToolStripMenuItem
         '
         Me.SearchRentalToolStripMenuItem.Name = "SearchRentalToolStripMenuItem"
-        Me.SearchRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SearchRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SearchRentalToolStripMenuItem.Text = "Cancel Rental"
         '
         'CustomersToolStripMenuItem
@@ -161,44 +168,19 @@ Partial Class frmCustomerUpdate
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'dtpDOBCU
-        '
-        Me.dtpDOBCU.CustomFormat = "MM/dd/yyyy h:mm tt"
-        Me.dtpDOBCU.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDOBCU.Location = New System.Drawing.Point(386, 341)
-        Me.dtpDOBCU.Name = "dtpDOBCU"
-        Me.dtpDOBCU.Size = New System.Drawing.Size(149, 20)
-        Me.dtpDOBCU.TabIndex = 74
-        '
         'lblDOBCU
         '
         Me.lblDOBCU.AutoSize = True
-        Me.lblDOBCU.Location = New System.Drawing.Point(285, 341)
+        Me.lblDOBCU.Location = New System.Drawing.Point(327, 309)
         Me.lblDOBCU.Name = "lblDOBCU"
-        Me.lblDOBCU.Size = New System.Drawing.Size(69, 13)
+        Me.lblDOBCU.Size = New System.Drawing.Size(29, 13)
         Me.lblDOBCU.TabIndex = 73
-        Me.lblDOBCU.Text = "Date of Birth:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(386, 298)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 72
-        '
-        'lblDLStateCU
-        '
-        Me.lblDLStateCU.AutoSize = True
-        Me.lblDLStateCU.Location = New System.Drawing.Point(327, 305)
-        Me.lblDLStateCU.Name = "lblDLStateCU"
-        Me.lblDLStateCU.Size = New System.Drawing.Size(35, 13)
-        Me.lblDLStateCU.TabIndex = 71
-        Me.lblDLStateCU.Text = "State:"
+        Me.lblDOBCU.Text = "Age:"
         '
         'lblDriversLicInfoCU
         '
         Me.lblDriversLicInfoCU.AutoSize = True
-        Me.lblDriversLicInfoCU.Location = New System.Drawing.Point(218, 222)
+        Me.lblDriversLicInfoCU.Location = New System.Drawing.Point(221, 237)
         Me.lblDriversLicInfoCU.Name = "lblDriversLicInfoCU"
         Me.lblDriversLicInfoCU.Size = New System.Drawing.Size(135, 13)
         Me.lblDriversLicInfoCU.TabIndex = 70
@@ -263,13 +245,6 @@ Partial Class frmCustomerUpdate
         Me.lblFirstNameCU.TabIndex = 53
         Me.lblFirstNameCU.Text = "First Name:"
         '
-        'txtStateCU
-        '
-        Me.txtStateCU.Location = New System.Drawing.Point(323, 174)
-        Me.txtStateCU.Name = "txtStateCU"
-        Me.txtStateCU.Size = New System.Drawing.Size(30, 20)
-        Me.txtStateCU.TabIndex = 64
-        '
         'txtFirstNameCU
         '
         Me.txtFirstNameCU.Location = New System.Drawing.Point(212, 67)
@@ -280,7 +255,7 @@ Partial Class frmCustomerUpdate
         'lblStateCU
         '
         Me.lblStateCU.AutoSize = True
-        Me.lblStateCU.Location = New System.Drawing.Point(282, 181)
+        Me.lblStateCU.Location = New System.Drawing.Point(275, 176)
         Me.lblStateCU.Name = "lblStateCU"
         Me.lblStateCU.Size = New System.Drawing.Size(35, 13)
         Me.lblStateCU.TabIndex = 63
@@ -309,12 +284,12 @@ Partial Class frmCustomerUpdate
         Me.txtMidInitialCU.Size = New System.Drawing.Size(27, 20)
         Me.txtMidInitialCU.TabIndex = 56
         '
-        'TextBox11
+        'txtLastNameCU
         '
-        Me.TextBox11.Location = New System.Drawing.Point(417, 67)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(118, 20)
-        Me.TextBox11.TabIndex = 58
+        Me.txtLastNameCU.Location = New System.Drawing.Point(417, 67)
+        Me.txtLastNameCU.Name = "txtLastNameCU"
+        Me.txtLastNameCU.Size = New System.Drawing.Size(118, 20)
+        Me.txtLastNameCU.TabIndex = 58
         '
         'lblCityCU
         '
@@ -358,25 +333,59 @@ Partial Class frmCustomerUpdate
         Me.lblCustomersList.TabIndex = 78
         Me.lblCustomersList.Text = "List of Customers"
         '
-        'HomeToolStripMenuItem
+        'txtAge
         '
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.HomeToolStripMenuItem.Text = "Home"
+        Me.txtAge.Location = New System.Drawing.Point(382, 309)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.Size = New System.Drawing.Size(100, 20)
+        Me.txtAge.TabIndex = 79
+        '
+        'cmbLicState
+        '
+        Me.cmbLicState.FormattingEnabled = True
+        Me.cmbLicState.Location = New System.Drawing.Point(315, 173)
+        Me.cmbLicState.Name = "cmbLicState"
+        Me.cmbLicState.Size = New System.Drawing.Size(55, 21)
+        Me.cmbLicState.TabIndex = 81
+        '
+        'txtPhone
+        '
+        Me.txtPhone.Location = New System.Drawing.Point(335, 204)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(147, 20)
+        Me.txtPhone.TabIndex = 83
+        '
+        'lblPhone
+        '
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.Location = New System.Drawing.Point(236, 207)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(81, 13)
+        Me.lblPhone.TabIndex = 82
+        Me.lblPhone.Text = "Phone Number:"
+        '
+        'lblInfo
+        '
+        Me.lblInfo.Location = New System.Drawing.Point(12, 392)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(295, 30)
+        Me.lblInfo.TabIndex = 84
         '
         'frmCustomerUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 431)
+        Me.ClientSize = New System.Drawing.Size(567, 441)
+        Me.Controls.Add(Me.lblInfo)
+        Me.Controls.Add(Me.txtPhone)
+        Me.Controls.Add(Me.lblPhone)
+        Me.Controls.Add(Me.cmbLicState)
+        Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.lblCustomersList)
         Me.Controls.Add(Me.lsbCustomers)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnUpdate)
-        Me.Controls.Add(Me.dtpDOBCU)
         Me.Controls.Add(Me.lblDOBCU)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.lblDLStateCU)
         Me.Controls.Add(Me.lblDriversLicInfoCU)
         Me.Controls.Add(Me.lblCustUpdate)
         Me.Controls.Add(Me.lblDriverLicCU)
@@ -385,13 +394,12 @@ Partial Class frmCustomerUpdate
         Me.Controls.Add(Me.lblLastNameCU)
         Me.Controls.Add(Me.lblZipCU)
         Me.Controls.Add(Me.lblFirstNameCU)
-        Me.Controls.Add(Me.txtStateCU)
         Me.Controls.Add(Me.txtFirstNameCU)
         Me.Controls.Add(Me.lblStateCU)
         Me.Controls.Add(Me.lblMidInitialCU)
         Me.Controls.Add(Me.txtCityCU)
         Me.Controls.Add(Me.txtMidInitialCU)
-        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.txtLastNameCU)
         Me.Controls.Add(Me.lblCityCU)
         Me.Controls.Add(Me.lblAddressCU)
         Me.Controls.Add(Me.txtAddressCU)
@@ -418,10 +426,7 @@ Partial Class frmCustomerUpdate
     Friend WithEvents AddNewPriceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnUpdate As System.Windows.Forms.Button
-    Friend WithEvents dtpDOBCU As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblDOBCU As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents lblDLStateCU As System.Windows.Forms.Label
     Friend WithEvents lblDriversLicInfoCU As System.Windows.Forms.Label
     Friend WithEvents lblCustUpdate As System.Windows.Forms.Label
     Friend WithEvents lblDriverLicCU As System.Windows.Forms.Label
@@ -430,17 +435,21 @@ Partial Class frmCustomerUpdate
     Friend WithEvents lblLastNameCU As System.Windows.Forms.Label
     Friend WithEvents lblZipCU As System.Windows.Forms.Label
     Friend WithEvents lblFirstNameCU As System.Windows.Forms.Label
-    Friend WithEvents txtStateCU As System.Windows.Forms.TextBox
     Friend WithEvents txtFirstNameCU As System.Windows.Forms.TextBox
     Friend WithEvents lblStateCU As System.Windows.Forms.Label
     Friend WithEvents lblMidInitialCU As System.Windows.Forms.Label
     Friend WithEvents txtCityCU As System.Windows.Forms.TextBox
     Friend WithEvents txtMidInitialCU As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents txtLastNameCU As System.Windows.Forms.TextBox
     Friend WithEvents lblCityCU As System.Windows.Forms.Label
     Friend WithEvents lblAddressCU As System.Windows.Forms.Label
     Friend WithEvents txtAddressCU As System.Windows.Forms.TextBox
     Friend WithEvents lsbCustomers As System.Windows.Forms.ListBox
     Friend WithEvents lblCustomersList As System.Windows.Forms.Label
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents txtAge As System.Windows.Forms.TextBox
+    Friend WithEvents cmbLicState As System.Windows.Forms.ComboBox
+    Friend WithEvents txtPhone As System.Windows.Forms.TextBox
+    Friend WithEvents lblPhone As System.Windows.Forms.Label
+    Friend WithEvents lblInfo As System.Windows.Forms.Label
 End Class

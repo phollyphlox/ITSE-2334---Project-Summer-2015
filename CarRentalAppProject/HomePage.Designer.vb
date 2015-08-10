@@ -38,6 +38,7 @@ Partial Class HomePage
         Me.AddNewVehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceOptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewPriceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -92,7 +93,7 @@ Partial Class HomePage
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'HomeToolStripMenuItem
@@ -122,7 +123,7 @@ Partial Class HomePage
         '
         'CustomersToolStripMenuItem
         '
-        Me.CustomersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateCustomersToolStripMenuItem})
+        Me.CustomersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateCustomersToolStripMenuItem, Me.AddCustomerToolStripMenuItem})
         Me.CustomersToolStripMenuItem.Name = "CustomersToolStripMenuItem"
         Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
         Me.CustomersToolStripMenuItem.Text = "Customers"
@@ -159,6 +160,12 @@ Partial Class HomePage
         Me.AddNewPriceToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.AddNewPriceToolStripMenuItem.Text = "Price List/Add/Update"
         '
+        'AddCustomerToolStripMenuItem
+        '
+        Me.AddCustomerToolStripMenuItem.Name = "AddCustomerToolStripMenuItem"
+        Me.AddCustomerToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.AddCustomerToolStripMenuItem.Text = "Add Customer"
+        '
         'HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,5 +200,6 @@ Partial Class HomePage
     Friend WithEvents AddNewVehiclesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PriceOptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AddNewPriceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AddCustomerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

@@ -31,4 +31,8 @@
     Private Sub AddNewPriceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewPriceToolStripMenuItem.Click
         frmPriceOptions.Show()
     End Sub
+
+    Private Sub AddCustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddCustomerToolStripMenuItem.Click
+
+    End Sub
 End Class
