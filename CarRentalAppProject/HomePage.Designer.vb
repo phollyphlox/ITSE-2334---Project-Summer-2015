@@ -28,17 +28,16 @@ Partial Class HomePage
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateCustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewVehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceOptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewPriceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -76,7 +75,7 @@ Partial Class HomePage
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HomeToolStripMenuItem, Me.RentalToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.PriceOptionsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.RentalToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.PriceOptionsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(730, 24)
@@ -95,12 +94,6 @@ Partial Class HomePage
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
-        '
-        'HomeToolStripMenuItem
-        '
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'RentalToolStripMenuItem
         '
@@ -134,6 +127,12 @@ Partial Class HomePage
         Me.UpdateCustomersToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.UpdateCustomersToolStripMenuItem.Text = "Update Customers"
         '
+        'AddCustomerToolStripMenuItem
+        '
+        Me.AddCustomerToolStripMenuItem.Name = "AddCustomerToolStripMenuItem"
+        Me.AddCustomerToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.AddCustomerToolStripMenuItem.Text = "Add Customer"
+        '
         'VehiclesToolStripMenuItem
         '
         Me.VehiclesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewVehiclesToolStripMenuItem})
@@ -160,12 +159,6 @@ Partial Class HomePage
         Me.AddNewPriceToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.AddNewPriceToolStripMenuItem.Text = "Price List/Add/Update"
         '
-        'AddCustomerToolStripMenuItem
-        '
-        Me.AddCustomerToolStripMenuItem.Name = "AddCustomerToolStripMenuItem"
-        Me.AddCustomerToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
-        Me.AddCustomerToolStripMenuItem.Text = "Add Customer"
-        '
         'HomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,7 +183,6 @@ Partial Class HomePage
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewRentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UpdateRentalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

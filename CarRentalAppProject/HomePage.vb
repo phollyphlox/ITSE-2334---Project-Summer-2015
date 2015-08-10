@@ -13,19 +13,26 @@
 
     Private Sub NewRentalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewRentalToolStripMenuItem.Click
         frmNewRental.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub UpdateRentalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateRentalToolStripMenuItem.Click
         frmRentalUpdate.Show()
+        Me.Hide()
 
     End Sub
 
     Private Sub UpdateCustomersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateCustomersToolStripMenuItem.Click
         frmCustomerUpdate.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub AddNewVehiclesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewVehiclesToolStripMenuItem.Click
         frmVehicles.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub AddNewPriceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewPriceToolStripMenuItem.Click

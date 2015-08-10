@@ -144,12 +144,6 @@
     <Compile Include="PaymentInvoice.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PriceOptions.Designer.vb">
-      <DependentUpon>PriceOptions.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PriceOptions.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Rental Update.Designer.vb">
       <DependentUpon>Rental Update.vb</DependentUpon>
     </Compile>
@@ -188,8 +182,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="NewRental.resx">
+      <DependentUpon>NewRental.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaymentInvoice.resx">
       <DependentUpon>PaymentInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles.resx">
+      <DependentUpon>Vehicles.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
