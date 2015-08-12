@@ -56,8 +56,6 @@ Partial Class FinalizeInvoice
         Me.lblMakeIR = New System.Windows.Forms.Label()
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.txtMakeIR = New System.Windows.Forms.TextBox()
-        Me.lblRatePlanIR = New System.Windows.Forms.Label()
-        Me.txtRatePlan = New System.Windows.Forms.TextBox()
         Me.txtDescriptionIR = New System.Windows.Forms.TextBox()
         Me.txtInvoiceIdIR = New System.Windows.Forms.TextBox()
         Me.lblInvoiceIdIR = New System.Windows.Forms.Label()
@@ -346,24 +344,6 @@ Partial Class FinalizeInvoice
         Me.txtMakeIR.Size = New System.Drawing.Size(100, 20)
         Me.txtMakeIR.TabIndex = 63
         '
-        'lblRatePlanIR
-        '
-        Me.lblRatePlanIR.AutoSize = True
-        Me.lblRatePlanIR.Location = New System.Drawing.Point(369, 250)
-        Me.lblRatePlanIR.Name = "lblRatePlanIR"
-        Me.lblRatePlanIR.Size = New System.Drawing.Size(57, 13)
-        Me.lblRatePlanIR.TabIndex = 60
-        Me.lblRatePlanIR.Text = "Rate Plan:"
-        '
-        'txtRatePlan
-        '
-        Me.txtRatePlan.BackColor = System.Drawing.SystemColors.Control
-        Me.txtRatePlan.Enabled = False
-        Me.txtRatePlan.Location = New System.Drawing.Point(372, 277)
-        Me.txtRatePlan.Name = "txtRatePlan"
-        Me.txtRatePlan.Size = New System.Drawing.Size(147, 20)
-        Me.txtRatePlan.TabIndex = 61
-        '
         'txtDescriptionIR
         '
         Me.txtDescriptionIR.BackColor = System.Drawing.SystemColors.Control
@@ -413,7 +393,7 @@ Partial Class FinalizeInvoice
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(222, 368)
+        Me.Label16.Location = New System.Drawing.Point(245, 368)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(76, 13)
         Me.Label16.TabIndex = 72
@@ -423,7 +403,7 @@ Partial Class FinalizeInvoice
         '
         Me.lblTotalAmount.AutoSize = True
         Me.lblTotalAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalAmount.Location = New System.Drawing.Point(304, 368)
+        Me.lblTotalAmount.Location = New System.Drawing.Point(327, 368)
         Me.lblTotalAmount.Name = "lblTotalAmount"
         Me.lblTotalAmount.Size = New System.Drawing.Size(43, 13)
         Me.lblTotalAmount.TabIndex = 73
@@ -505,8 +485,6 @@ Partial Class FinalizeInvoice
         Me.Controls.Add(Me.lblMakeIR)
         Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.txtMakeIR)
-        Me.Controls.Add(Me.lblRatePlanIR)
-        Me.Controls.Add(Me.txtRatePlan)
         Me.Controls.Add(Me.txtDescriptionIR)
         Me.Controls.Add(Me.txtZipIR)
         Me.Controls.Add(Me.lblLastNameIR)
@@ -565,8 +543,6 @@ Partial Class FinalizeInvoice
     Friend WithEvents lblMakeIR As System.Windows.Forms.Label
     Friend WithEvents lblDescription As System.Windows.Forms.Label
     Friend WithEvents txtMakeIR As System.Windows.Forms.TextBox
-    Friend WithEvents lblRatePlanIR As System.Windows.Forms.Label
-    Friend WithEvents txtRatePlan As System.Windows.Forms.TextBox
     Friend WithEvents txtDescriptionIR As System.Windows.Forms.TextBox
     Friend WithEvents txtInvoiceIdIR As System.Windows.Forms.TextBox
     Friend WithEvents lblInvoiceIdIR As System.Windows.Forms.Label

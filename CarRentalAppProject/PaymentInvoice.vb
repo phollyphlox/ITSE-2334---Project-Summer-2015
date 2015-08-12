@@ -59,6 +59,17 @@ Public Class frmPaymentInvoice
 
     Private Sub btnFinalizeInvoice_Click(sender As Object, e As EventArgs) Handles btnFinalizeInvoice.Click
 
+        FinalizeInvoice.txtFirstNameIR.Text = frmCustomerInfo.txtFirstName.Text
+        FinalizeInvoice.txtLastNameIR.Text = frmCustomerInfo.txtLastName.Text
+        FinalizeInvoice.txtMidInitIR.Text = frmCustomerInfo.txtMiddleInitial.Text
+        FinalizeInvoice.txtAddressIR.Text = frmCustomerInfo.txtAddress.Text
+        FinalizeInvoice.txtCityIR.Text = frmCustomerInfo.txtCity.Text
+        FinalizeInvoice.txtStateIR.Text = frmCustomerInfo.cmbLicState.Text
+        FinalizeInvoice.txtZipIR.Text = frmCustomerInfo.txtZip.Text
+        FinalizeInvoice.lblCardType.Text = Me.cmbCCtype.Text
+        FinalizeInvoice.lblTotalAmount.Text = Me.txtFinalTotal.Text
+        FinalizeInvoice.txtPickupDateIR.Text = NewPaymentInv.shareRentalDate
+        FinalizeInvoice.txtReturnDateIR.Text = NewPaymentInv.shareReturnDate
         Try
             Dim newRentalRow As new_Maverick_Car_RentalDataSet.RentalRow
             newRentalRow = Me.New_Maverick_Car_RentalDataSet.Rental.NewRentalRow()
