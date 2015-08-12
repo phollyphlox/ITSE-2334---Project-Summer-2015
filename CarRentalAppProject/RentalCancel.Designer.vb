@@ -25,6 +25,7 @@ Partial Class frmRentalCancel
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,7 +58,6 @@ Partial Class frmRentalCancel
         Me.txtInvoiceIdRC3 = New System.Windows.Forms.TextBox()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -83,6 +83,12 @@ Partial Class frmRentalCancel
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Text = "Home"
+        '
         'RentalToolStripMenuItem
         '
         Me.RentalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewRentalToolStripMenuItem, Me.UpdateRentalToolStripMenuItem})
@@ -93,13 +99,13 @@ Partial Class frmRentalCancel
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.UpdateRentalToolStripMenuItem.Text = "Update Rental"
         '
         'CustomersToolStripMenuItem
@@ -327,12 +333,6 @@ Partial Class frmRentalCancel
         Me.btnHome.TabIndex = 111
         Me.btnHome.Text = "Home"
         Me.btnHome.UseVisualStyleBackColor = True
-        '
-        'HomeToolStripMenuItem
-        '
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'frmRentalCancel
         '

@@ -26,6 +26,7 @@ Partial Class FinalizeInvoice
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -70,7 +71,6 @@ Partial Class FinalizeInvoice
         Me.lblPickupDateIR = New System.Windows.Forms.Label()
         Me.txtPickupDateIR = New System.Windows.Forms.TextBox()
         Me.txtReturnDateIR = New System.Windows.Forms.TextBox()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -102,8 +102,14 @@ Partial Class FinalizeInvoice
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'RentalToolStripMenuItem
         '
@@ -115,19 +121,19 @@ Partial Class FinalizeInvoice
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.UpdateRentalToolStripMenuItem.Text = "Update Rental"
         '
         'SearchRentalToolStripMenuItem
         '
         Me.SearchRentalToolStripMenuItem.Name = "SearchRentalToolStripMenuItem"
-        Me.SearchRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SearchRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SearchRentalToolStripMenuItem.Text = "Cancel Rental"
         '
         'CustomersToolStripMenuItem
@@ -476,12 +482,6 @@ Partial Class FinalizeInvoice
         Me.txtReturnDateIR.Name = "txtReturnDateIR"
         Me.txtReturnDateIR.Size = New System.Drawing.Size(100, 20)
         Me.txtReturnDateIR.TabIndex = 81
-        '
-        'HomeToolStripMenuItem
-        '
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'FinalizeInvoice
         '

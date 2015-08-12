@@ -22,6 +22,9 @@ Partial Class frmPaymentInvoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim CategoryPriceLabel As System.Windows.Forms.Label
+        Dim PriceLabel As System.Windows.Forms.Label
         Me.lblInvoiceInfo = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -31,10 +34,6 @@ Partial Class frmPaymentInvoice
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VehiclesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PriceOptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblInvoieID = New System.Windows.Forms.Label()
-        Me.txtInvoiceID = New System.Windows.Forms.TextBox()
-        Me.lblEmployeeID = New System.Windows.Forms.Label()
-        Me.txtEmployeeID = New System.Windows.Forms.TextBox()
         Me.lblPaymentInformation = New System.Windows.Forms.Label()
         Me.lblCCtype = New System.Windows.Forms.Label()
         Me.cmbCCtype = New System.Windows.Forms.ComboBox()
@@ -50,7 +49,9 @@ Partial Class frmPaymentInvoice
         Me.btnFinalizeInvoice = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.gbxCostDetails = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PriceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.New_Maverick_Car_RentalDataSet = New CarRentalAppProject.new_Maverick_Car_RentalDataSet()
+        Me.cmbCategoryPrice = New System.Windows.Forms.ComboBox()
         Me.txtFinalTotal = New System.Windows.Forms.TextBox()
         Me.lblFinalTotal = New System.Windows.Forms.Label()
         Me.txtTax = New System.Windows.Forms.TextBox()
@@ -59,17 +60,34 @@ Partial Class frmPaymentInvoice
         Me.lblSubtotal = New System.Windows.Forms.Label()
         Me.txtInsuranceFee = New System.Windows.Forms.TextBox()
         Me.lblInsuranceFee = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.lblInsurance = New System.Windows.Forms.Label()
-        Me.ckbInsurance = New System.Windows.Forms.CheckBox()
         Me.lblCarRentalApp = New System.Windows.Forms.Label()
-        Me.ckbPersonalIns = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.lblView = New System.Windows.Forms.Label()
+        Me.grpInsurance = New System.Windows.Forms.GroupBox()
+        Me.rbnPurchase = New System.Windows.Forms.RadioButton()
+        Me.rbnPersonal = New System.Windows.Forms.RadioButton()
+        Me.rbnWaiver = New System.Windows.Forms.RadioButton()
+        Me.PriceTableAdapter = New CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.PriceTableAdapter()
+        Me.TableAdapterManager = New CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.TableAdapterManager()
+        Me.RentalTableAdapter1 = New CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.RentalTableAdapter()
+        Me.RentalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.lblPrice = New System.Windows.Forms.Label()
+        CategoryPriceLabel = New System.Windows.Forms.Label()
+        PriceLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.gbxCostDetails.SuspendLayout()
+        CType(Me.PriceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.New_Maverick_Car_RentalDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpInsurance.SuspendLayout()
+        CType(Me.RentalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'CategoryPriceLabel
+        '
+        CategoryPriceLabel.AutoSize = True
+        CategoryPriceLabel.Location = New System.Drawing.Point(49, 28)
+        CategoryPriceLabel.Name = "CategoryPriceLabel"
+        CategoryPriceLabel.Size = New System.Drawing.Size(52, 13)
+        CategoryPriceLabel.TabIndex = 13
+        CategoryPriceLabel.Text = "Category:"
         '
         'lblInvoiceInfo
         '
@@ -85,7 +103,7 @@ Partial Class frmPaymentInvoice
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.HomeToolStripMenuItem, Me.RentalToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.PriceOptionsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(578, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(583, 24)
         Me.MenuStrip1.TabIndex = 44
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -132,42 +150,10 @@ Partial Class frmPaymentInvoice
         Me.PriceOptionsToolStripMenuItem.Size = New System.Drawing.Size(90, 20)
         Me.PriceOptionsToolStripMenuItem.Text = "Price Options"
         '
-        'lblInvoieID
-        '
-        Me.lblInvoieID.AutoSize = True
-        Me.lblInvoieID.Location = New System.Drawing.Point(41, 75)
-        Me.lblInvoieID.Name = "lblInvoieID"
-        Me.lblInvoieID.Size = New System.Drawing.Size(59, 13)
-        Me.lblInvoieID.TabIndex = 45
-        Me.lblInvoieID.Text = "Invoice ID:"
-        '
-        'txtInvoiceID
-        '
-        Me.txtInvoiceID.Location = New System.Drawing.Point(97, 68)
-        Me.txtInvoiceID.Name = "txtInvoiceID"
-        Me.txtInvoiceID.Size = New System.Drawing.Size(100, 20)
-        Me.txtInvoiceID.TabIndex = 46
-        '
-        'lblEmployeeID
-        '
-        Me.lblEmployeeID.AutoSize = True
-        Me.lblEmployeeID.Location = New System.Drawing.Point(44, 101)
-        Me.lblEmployeeID.Name = "lblEmployeeID"
-        Me.lblEmployeeID.Size = New System.Drawing.Size(73, 13)
-        Me.lblEmployeeID.TabIndex = 47
-        Me.lblEmployeeID.Text = "Employee ID: "
-        '
-        'txtEmployeeID
-        '
-        Me.txtEmployeeID.Location = New System.Drawing.Point(124, 93)
-        Me.txtEmployeeID.Name = "txtEmployeeID"
-        Me.txtEmployeeID.Size = New System.Drawing.Size(100, 20)
-        Me.txtEmployeeID.TabIndex = 48
-        '
         'lblPaymentInformation
         '
         Me.lblPaymentInformation.AutoSize = True
-        Me.lblPaymentInformation.Location = New System.Drawing.Point(21, 165)
+        Me.lblPaymentInformation.Location = New System.Drawing.Point(18, 146)
         Me.lblPaymentInformation.Name = "lblPaymentInformation"
         Me.lblPaymentInformation.Size = New System.Drawing.Size(103, 13)
         Me.lblPaymentInformation.TabIndex = 49
@@ -234,7 +220,7 @@ Partial Class frmPaymentInvoice
         'cmbExpMM
         '
         Me.cmbExpMM.FormattingEnabled = True
-        Me.cmbExpMM.Location = New System.Drawing.Point(124, 305)
+        Me.cmbExpMM.Location = New System.Drawing.Point(121, 311)
         Me.cmbExpMM.Name = "cmbExpMM"
         Me.cmbExpMM.Size = New System.Drawing.Size(40, 21)
         Me.cmbExpMM.TabIndex = 57
@@ -251,7 +237,7 @@ Partial Class frmPaymentInvoice
         'cmbExpYY
         '
         Me.cmbExpYY.FormattingEnabled = True
-        Me.cmbExpYY.Location = New System.Drawing.Point(182, 305)
+        Me.cmbExpYY.Location = New System.Drawing.Point(172, 311)
         Me.cmbExpYY.Name = "cmbExpYY"
         Me.cmbExpYY.Size = New System.Drawing.Size(52, 21)
         Me.cmbExpYY.TabIndex = 59
@@ -285,7 +271,10 @@ Partial Class frmPaymentInvoice
         '
         'gbxCostDetails
         '
-        Me.gbxCostDetails.Controls.Add(Me.Label1)
+        Me.gbxCostDetails.Controls.Add(PriceLabel)
+        Me.gbxCostDetails.Controls.Add(Me.lblPrice)
+        Me.gbxCostDetails.Controls.Add(CategoryPriceLabel)
+        Me.gbxCostDetails.Controls.Add(Me.cmbCategoryPrice)
         Me.gbxCostDetails.Controls.Add(Me.txtFinalTotal)
         Me.gbxCostDetails.Controls.Add(Me.lblFinalTotal)
         Me.gbxCostDetails.Controls.Add(Me.txtTax)
@@ -294,27 +283,36 @@ Partial Class frmPaymentInvoice
         Me.gbxCostDetails.Controls.Add(Me.lblSubtotal)
         Me.gbxCostDetails.Controls.Add(Me.txtInsuranceFee)
         Me.gbxCostDetails.Controls.Add(Me.lblInsuranceFee)
-        Me.gbxCostDetails.Controls.Add(Me.TextBox6)
-        Me.gbxCostDetails.Controls.Add(Me.Label12)
         Me.gbxCostDetails.Location = New System.Drawing.Point(311, 68)
         Me.gbxCostDetails.Name = "gbxCostDetails"
-        Me.gbxCostDetails.Size = New System.Drawing.Size(234, 221)
+        Me.gbxCostDetails.Size = New System.Drawing.Size(260, 243)
         Me.gbxCostDetails.TabIndex = 63
         Me.gbxCostDetails.TabStop = False
         Me.gbxCostDetails.Text = "Price Details"
         '
-        'Label1
+        'PriceBindingSource
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(71, 55)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Cost Per Day:"
+        Me.PriceBindingSource.DataMember = "Price"
+        Me.PriceBindingSource.DataSource = Me.New_Maverick_Car_RentalDataSet
+        '
+        'New_Maverick_Car_RentalDataSet
+        '
+        Me.New_Maverick_Car_RentalDataSet.DataSetName = "new_Maverick_Car_RentalDataSet"
+        Me.New_Maverick_Car_RentalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'cmbCategoryPrice
+        '
+        Me.cmbCategoryPrice.DataSource = Me.PriceBindingSource
+        Me.cmbCategoryPrice.DisplayMember = "Category"
+        Me.cmbCategoryPrice.FormattingEnabled = True
+        Me.cmbCategoryPrice.Location = New System.Drawing.Point(107, 25)
+        Me.cmbCategoryPrice.Name = "cmbCategoryPrice"
+        Me.cmbCategoryPrice.Size = New System.Drawing.Size(121, 21)
+        Me.cmbCategoryPrice.TabIndex = 14
         '
         'txtFinalTotal
         '
-        Me.txtFinalTotal.Location = New System.Drawing.Point(149, 165)
+        Me.txtFinalTotal.Location = New System.Drawing.Point(147, 203)
         Me.txtFinalTotal.Name = "txtFinalTotal"
         Me.txtFinalTotal.Size = New System.Drawing.Size(49, 20)
         Me.txtFinalTotal.TabIndex = 11
@@ -322,7 +320,7 @@ Partial Class frmPaymentInvoice
         'lblFinalTotal
         '
         Me.lblFinalTotal.AutoSize = True
-        Me.lblFinalTotal.Location = New System.Drawing.Point(84, 171)
+        Me.lblFinalTotal.Location = New System.Drawing.Point(82, 209)
         Me.lblFinalTotal.Name = "lblFinalTotal"
         Me.lblFinalTotal.Size = New System.Drawing.Size(59, 13)
         Me.lblFinalTotal.TabIndex = 10
@@ -330,7 +328,7 @@ Partial Class frmPaymentInvoice
         '
         'txtTax
         '
-        Me.txtTax.Location = New System.Drawing.Point(149, 133)
+        Me.txtTax.Location = New System.Drawing.Point(147, 171)
         Me.txtTax.Name = "txtTax"
         Me.txtTax.Size = New System.Drawing.Size(49, 20)
         Me.txtTax.TabIndex = 9
@@ -338,7 +336,7 @@ Partial Class frmPaymentInvoice
         'lblTax
         '
         Me.lblTax.AutoSize = True
-        Me.lblTax.Location = New System.Drawing.Point(104, 140)
+        Me.lblTax.Location = New System.Drawing.Point(102, 178)
         Me.lblTax.Name = "lblTax"
         Me.lblTax.Size = New System.Drawing.Size(28, 13)
         Me.lblTax.TabIndex = 8
@@ -346,7 +344,7 @@ Partial Class frmPaymentInvoice
         '
         'txtSubtotal
         '
-        Me.txtSubtotal.Location = New System.Drawing.Point(149, 107)
+        Me.txtSubtotal.Location = New System.Drawing.Point(147, 145)
         Me.txtSubtotal.Name = "txtSubtotal"
         Me.txtSubtotal.Size = New System.Drawing.Size(49, 20)
         Me.txtSubtotal.TabIndex = 7
@@ -354,7 +352,7 @@ Partial Class frmPaymentInvoice
         'lblSubtotal
         '
         Me.lblSubtotal.AutoSize = True
-        Me.lblSubtotal.Location = New System.Drawing.Point(94, 114)
+        Me.lblSubtotal.Location = New System.Drawing.Point(92, 152)
         Me.lblSubtotal.Name = "lblSubtotal"
         Me.lblSubtotal.Size = New System.Drawing.Size(49, 13)
         Me.lblSubtotal.TabIndex = 6
@@ -362,7 +360,7 @@ Partial Class frmPaymentInvoice
         '
         'txtInsuranceFee
         '
-        Me.txtInsuranceFee.Location = New System.Drawing.Point(149, 75)
+        Me.txtInsuranceFee.Location = New System.Drawing.Point(147, 113)
         Me.txtInsuranceFee.Name = "txtInsuranceFee"
         Me.txtInsuranceFee.Size = New System.Drawing.Size(49, 20)
         Me.txtInsuranceFee.TabIndex = 5
@@ -370,48 +368,11 @@ Partial Class frmPaymentInvoice
         'lblInsuranceFee
         '
         Me.lblInsuranceFee.AutoSize = True
-        Me.lblInsuranceFee.Location = New System.Drawing.Point(38, 82)
+        Me.lblInsuranceFee.Location = New System.Drawing.Point(36, 120)
         Me.lblInsuranceFee.Name = "lblInsuranceFee"
         Me.lblInsuranceFee.Size = New System.Drawing.Size(105, 13)
         Me.lblInsuranceFee.TabIndex = 4
         Me.lblInsuranceFee.Text = "Purchase Insurance:"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.Control
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(149, 48)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(49, 20)
-        Me.TextBox6.TabIndex = 3
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(155, 23)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(31, 13)
-        Me.Label12.TabIndex = 2
-        Me.Label12.Text = "Cost:"
-        '
-        'lblInsurance
-        '
-        Me.lblInsurance.AutoSize = True
-        Me.lblInsurance.Location = New System.Drawing.Point(21, 123)
-        Me.lblInsurance.Name = "lblInsurance"
-        Me.lblInsurance.Size = New System.Drawing.Size(57, 13)
-        Me.lblInsurance.TabIndex = 64
-        Me.lblInsurance.Text = "Insurance:"
-        '
-        'ckbInsurance
-        '
-        Me.ckbInsurance.AutoSize = True
-        Me.ckbInsurance.Location = New System.Drawing.Point(47, 143)
-        Me.ckbInsurance.Name = "ckbInsurance"
-        Me.ckbInsurance.Size = New System.Drawing.Size(60, 17)
-        Me.ckbInsurance.TabIndex = 65
-        Me.ckbInsurance.Text = "Waiver"
-        Me.ckbInsurance.UseVisualStyleBackColor = True
         '
         'lblCarRentalApp
         '
@@ -422,46 +383,93 @@ Partial Class frmPaymentInvoice
         Me.lblCarRentalApp.TabIndex = 66
         Me.lblCarRentalApp.Text = "Car Rental Application"
         '
-        'ckbPersonalIns
+        'grpInsurance
         '
-        Me.ckbPersonalIns.AutoSize = True
-        Me.ckbPersonalIns.Location = New System.Drawing.Point(113, 143)
-        Me.ckbPersonalIns.Name = "ckbPersonalIns"
-        Me.ckbPersonalIns.Size = New System.Drawing.Size(67, 17)
-        Me.ckbPersonalIns.TabIndex = 69
-        Me.ckbPersonalIns.Text = "Personal"
-        Me.ckbPersonalIns.UseVisualStyleBackColor = True
+        Me.grpInsurance.Controls.Add(Me.rbnPurchase)
+        Me.grpInsurance.Controls.Add(Me.rbnPersonal)
+        Me.grpInsurance.Controls.Add(Me.rbnWaiver)
+        Me.grpInsurance.Location = New System.Drawing.Point(13, 82)
+        Me.grpInsurance.Name = "grpInsurance"
+        Me.grpInsurance.Size = New System.Drawing.Size(229, 46)
+        Me.grpInsurance.TabIndex = 72
+        Me.grpInsurance.TabStop = False
+        Me.grpInsurance.Text = "Insurance:"
         '
-        'CheckBox1
+        'rbnPurchase
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(182, 143)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(71, 17)
-        Me.CheckBox1.TabIndex = 70
-        Me.CheckBox1.Text = "Purchase"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.rbnPurchase.AutoSize = True
+        Me.rbnPurchase.Location = New System.Drawing.Point(147, 20)
+        Me.rbnPurchase.Name = "rbnPurchase"
+        Me.rbnPurchase.Size = New System.Drawing.Size(70, 17)
+        Me.rbnPurchase.TabIndex = 2
+        Me.rbnPurchase.TabStop = True
+        Me.rbnPurchase.Text = "Purchase"
+        Me.rbnPurchase.UseVisualStyleBackColor = True
         '
-        'lblView
+        'rbnPersonal
         '
-        Me.lblView.AutoSize = True
-        Me.lblView.Location = New System.Drawing.Point(13, 341)
-        Me.lblView.Name = "lblView"
-        Me.lblView.Size = New System.Drawing.Size(39, 13)
-        Me.lblView.TabIndex = 71
-        Me.lblView.Text = "Label2"
+        Me.rbnPersonal.AutoSize = True
+        Me.rbnPersonal.Location = New System.Drawing.Point(73, 18)
+        Me.rbnPersonal.Name = "rbnPersonal"
+        Me.rbnPersonal.Size = New System.Drawing.Size(66, 17)
+        Me.rbnPersonal.TabIndex = 1
+        Me.rbnPersonal.TabStop = True
+        Me.rbnPersonal.Text = "Personal"
+        Me.rbnPersonal.UseVisualStyleBackColor = True
+        '
+        'rbnWaiver
+        '
+        Me.rbnWaiver.AutoSize = True
+        Me.rbnWaiver.Location = New System.Drawing.Point(8, 20)
+        Me.rbnWaiver.Name = "rbnWaiver"
+        Me.rbnWaiver.Size = New System.Drawing.Size(59, 17)
+        Me.rbnWaiver.TabIndex = 0
+        Me.rbnWaiver.TabStop = True
+        Me.rbnWaiver.Text = "Waiver"
+        Me.rbnWaiver.UseVisualStyleBackColor = True
+        '
+        'PriceTableAdapter
+        '
+        Me.PriceTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CustomerTableAdapter = Nothing
+        Me.TableAdapterManager.PriceTableAdapter = Me.PriceTableAdapter
+        Me.TableAdapterManager.RentalTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VehicleTableAdapter = Nothing
+        '
+        'RentalTableAdapter1
+        '
+        Me.RentalTableAdapter1.ClearBeforeFill = True
+        '
+        'PriceLabel
+        '
+        PriceLabel.AutoSize = True
+        PriceLabel.Location = New System.Drawing.Point(67, 68)
+        PriceLabel.Name = "PriceLabel"
+        PriceLabel.Size = New System.Drawing.Size(34, 13)
+        PriceLabel.TabIndex = 14
+        PriceLabel.Text = "Price:"
+        '
+        'lblPrice
+        '
+        Me.lblPrice.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PriceBindingSource, "Price", True))
+        Me.lblPrice.Location = New System.Drawing.Point(107, 68)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(100, 23)
+        Me.lblPrice.TabIndex = 15
+        Me.lblPrice.Text = "Label1"
         '
         'frmPaymentInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 431)
-        Me.Controls.Add(Me.lblView)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.ckbPersonalIns)
+        Me.ClientSize = New System.Drawing.Size(583, 432)
+        Me.Controls.Add(Me.grpInsurance)
         Me.Controls.Add(Me.lblCarRentalApp)
-        Me.Controls.Add(Me.ckbInsurance)
-        Me.Controls.Add(Me.lblInsurance)
         Me.Controls.Add(Me.gbxCostDetails)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnFinalizeInvoice)
@@ -477,10 +485,6 @@ Partial Class frmPaymentInvoice
         Me.Controls.Add(Me.cmbCCtype)
         Me.Controls.Add(Me.lblCCtype)
         Me.Controls.Add(Me.lblPaymentInformation)
-        Me.Controls.Add(Me.txtEmployeeID)
-        Me.Controls.Add(Me.lblEmployeeID)
-        Me.Controls.Add(Me.txtInvoiceID)
-        Me.Controls.Add(Me.lblInvoieID)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.lblInvoiceInfo)
         Me.Name = "frmPaymentInvoice"
@@ -489,6 +493,11 @@ Partial Class frmPaymentInvoice
         Me.MenuStrip1.PerformLayout()
         Me.gbxCostDetails.ResumeLayout(False)
         Me.gbxCostDetails.PerformLayout()
+        CType(Me.PriceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.New_Maverick_Car_RentalDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpInsurance.ResumeLayout(False)
+        Me.grpInsurance.PerformLayout()
+        CType(Me.RentalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -501,10 +510,6 @@ Partial Class frmPaymentInvoice
     Friend WithEvents CustomersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VehiclesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PriceOptionsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents lblInvoieID As System.Windows.Forms.Label
-    Friend WithEvents txtInvoiceID As System.Windows.Forms.TextBox
-    Friend WithEvents lblEmployeeID As System.Windows.Forms.Label
-    Friend WithEvents txtEmployeeID As System.Windows.Forms.TextBox
     Friend WithEvents lblPaymentInformation As System.Windows.Forms.Label
     Friend WithEvents lblCCtype As System.Windows.Forms.Label
     Friend WithEvents cmbCCtype As System.Windows.Forms.ComboBox
@@ -528,14 +533,18 @@ Partial Class frmPaymentInvoice
     Friend WithEvents lblSubtotal As System.Windows.Forms.Label
     Friend WithEvents txtInsuranceFee As System.Windows.Forms.TextBox
     Friend WithEvents lblInsuranceFee As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents lblInsurance As System.Windows.Forms.Label
-    Friend WithEvents ckbInsurance As System.Windows.Forms.CheckBox
     Friend WithEvents lblCarRentalApp As System.Windows.Forms.Label
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ckbPersonalIns As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents lblView As System.Windows.Forms.Label
+    Friend WithEvents grpInsurance As System.Windows.Forms.GroupBox
+    Friend WithEvents rbnPurchase As System.Windows.Forms.RadioButton
+    Friend WithEvents rbnPersonal As System.Windows.Forms.RadioButton
+    Friend WithEvents rbnWaiver As System.Windows.Forms.RadioButton
+    Friend WithEvents New_Maverick_Car_RentalDataSet As CarRentalAppProject.new_Maverick_Car_RentalDataSet
+    Friend WithEvents PriceBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PriceTableAdapter As CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.PriceTableAdapter
+    Friend WithEvents TableAdapterManager As CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents cmbCategoryPrice As System.Windows.Forms.ComboBox
+    Friend WithEvents RentalTableAdapter1 As CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.RentalTableAdapter
+    Friend WithEvents RentalBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents lblPrice As System.Windows.Forms.Label
 End Class

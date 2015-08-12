@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub AddNewPriceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewPriceToolStripMenuItem.Click
-        frmPriceOptions.Show()
+        ' frmPriceOptions.Show()
     End Sub
 
     Private Sub AddNewVehiclesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewVehiclesToolStripMenuItem.Click
@@ -26,5 +26,9 @@
 
     Private Sub UpdateRentalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateRentalToolStripMenuItem.Click
         frmRentalUpdate.Show()
+    End Sub
+
+    Private Sub frmRentalCancel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

@@ -4,6 +4,10 @@
     End Sub
 
     Private Sub btnVehicleSearchCRA_Click(sender As Object, e As EventArgs) Handles btnVehicleSearchCRA.Click
+
+        NewPaymentInv.shareCategory = Convert.ToString(cmbCategoryCRA.SelectedValue)
+        NewPaymentInv.shareRentalDate = dtpPickupDateCRA.Value
+        NewPaymentInv.shareReturnDate = dtpReturnDateCRA.Value
         'RentalTableAdapter.Adapter.Update(Me.New_Maverick_Car_RentalDataSet.Rental.Date_RentedColumn)
         'RentalTableAdapter.Adapter.Update(Me.New_Maverick_Car_RentalDataSet.Rental.Date_ReturnedColumn)
         frmNewRentalVehicleList.Show()
@@ -16,7 +20,7 @@
         'TODO: This line of code loads data into the 'New_Maverick_Car_RentalDataSet.Rental' table. You can move, or remove it, as needed.
         Me.RentalTableAdapter.Fill(Me.New_Maverick_Car_RentalDataSet.Rental)
         'TODO: This line of code loads data into the 'New_Maverick_Car_RentalDataSet.Price' table. You can move, or remove it, as needed.
-        Me.PriceTableAdapter.Fill(Me.New_Maverick_Car_RentalDataSet.Price)
+
         'TODO: This line of code loads data into the 'New_Maverick_Car_RentalDataSet.Vehicle' table. You can move, or remove it, as needed.
         Me.VehicleTableAdapter.Fill(Me.New_Maverick_Car_RentalDataSet.Vehicle)
 

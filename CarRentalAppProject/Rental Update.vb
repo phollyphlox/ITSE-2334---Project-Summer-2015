@@ -25,6 +25,10 @@
     End Sub
 
     Private Sub PriceOptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PriceOptionsToolStripMenuItem.Click
-        frmPriceOptions.Show()
+        '   frmPriceOptions.Show()
+    End Sub
+
+    Private Sub frmRentalUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

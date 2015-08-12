@@ -1,23 +1,52 @@
 ﻿Public Class NewPaymentInv
 
     'Payment and Invoice Section
-    Public Property InvoiceId As String
-    Public Property EmployeeID As String
-    Public Property CreditCardType As String
-    Public Property CreditCardNum As String
-    Public Property CCSecurityCode As String
-    Public Property FinalTotal As String
-    Private mCalcTotal As Double
-
-    Public Property CalcTotal As Double
+    Public Shared Property mCategory As String
+    Public Shared Property mRentalDate As Date
+    Public Shared Property mReturnDate As Date
+    Public Shared Property shareCategory As String
         Get
-            Return mCalcTotal
+            Return mCategory
         End Get
-        Set(ByVal value As Double)
-            mCalcTotal = value
+        Set(ByVal value As String)
+            mCategory = value
         End Set
     End Property
-    Public Overrides Function ToString() As String
-        Return InvoiceId & ", " & EmployeeID & ", " & CreditCardType & ", " & CreditCardNum & ", " & FinalTotal
-    End Function
+    Public Shared Property shareRentalDate As Date
+        Get
+            Return mRentalDate
+        End Get
+        Set(ByVal value As Date)
+            mRentalDate = value
+        End Set
+    End Property
+    Public Shared Property shareReturnDate As Date
+        Get
+            Return mReturnDate
+        End Get
+        Set(ByVal value As Date)
+            mReturnDate = value
+        End Set
+    End Property
+
+    'Vehicle Section
+    Public Shared Property mKey As Integer
+    Public Shared Property mVIN As String
+    Public Shared Property cKey As Integer
+        Get
+            Return mKey
+        End Get
+        Set(ByVal value As Integer)
+            mKey = value
+        End Set
+    End Property
+    Public Shared Property cVIN As String
+        Get
+            Return mVIN
+        End Get
+        Set(ByVal value As String)
+            mVIN = value
+        End Set
+    End Property
+
 End Class

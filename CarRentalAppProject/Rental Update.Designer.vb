@@ -25,6 +25,7 @@ Partial Class frmRentalUpdate
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomoeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CancelRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +70,6 @@ Partial Class frmRentalUpdate
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnCloseInvoice = New System.Windows.Forms.Button()
-        Me.HomoeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -96,6 +96,12 @@ Partial Class frmRentalUpdate
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
+        'HomoeToolStripMenuItem
+        '
+        Me.HomoeToolStripMenuItem.Name = "HomoeToolStripMenuItem"
+        Me.HomoeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomoeToolStripMenuItem.Text = "Home"
+        '
         'RentalToolStripMenuItem
         '
         Me.RentalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewRentalToolStripMenuItem, Me.CancelRentalToolStripMenuItem})
@@ -106,13 +112,13 @@ Partial Class frmRentalUpdate
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'CancelRentalToolStripMenuItem
         '
         Me.CancelRentalToolStripMenuItem.Name = "CancelRentalToolStripMenuItem"
-        Me.CancelRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CancelRentalToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
         Me.CancelRentalToolStripMenuItem.Text = "Cancel Rental"
         '
         'CustomersToolStripMenuItem
@@ -459,12 +465,6 @@ Partial Class frmRentalUpdate
         Me.btnCloseInvoice.TabIndex = 105
         Me.btnCloseInvoice.Text = "Close Invoice"
         Me.btnCloseInvoice.UseVisualStyleBackColor = True
-        '
-        'HomoeToolStripMenuItem
-        '
-        Me.HomoeToolStripMenuItem.Name = "HomoeToolStripMenuItem"
-        Me.HomoeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.HomoeToolStripMenuItem.Text = "Home"
         '
         'frmRentalUpdate
         '

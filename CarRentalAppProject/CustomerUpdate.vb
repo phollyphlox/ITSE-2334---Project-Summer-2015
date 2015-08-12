@@ -12,7 +12,7 @@ Public Class frmCustomerUpdate
     End Sub
 
     Private Sub AddNewPriceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewPriceToolStripMenuItem.Click
-        frmPriceOptions.Show()
+        '  frmPriceOptions.Show()
     End Sub
 
     Private Sub NewRentalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewRentalToolStripMenuItem.Click

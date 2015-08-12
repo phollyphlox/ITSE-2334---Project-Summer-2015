@@ -27,6 +27,7 @@ Partial Class frmVehicles
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateRentalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,7 +54,6 @@ Partial Class frmVehicles
         Me.lsbVehicleList = New System.Windows.Forms.ListBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -97,6 +97,12 @@ Partial Class frmVehicles
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.HomeToolStripMenuItem.Text = "Home"
+        '
         'RentalToolStripMenuItem
         '
         Me.RentalToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewRentalToolStripMenuItem, Me.UpdateRentalToolStripMenuItem, Me.SearchRentalToolStripMenuItem})
@@ -107,19 +113,19 @@ Partial Class frmVehicles
         'NewRentalToolStripMenuItem
         '
         Me.NewRentalToolStripMenuItem.Name = "NewRentalToolStripMenuItem"
-        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.NewRentalToolStripMenuItem.Text = "New Rental"
         '
         'UpdateRentalToolStripMenuItem
         '
         Me.UpdateRentalToolStripMenuItem.Name = "UpdateRentalToolStripMenuItem"
-        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UpdateRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.UpdateRentalToolStripMenuItem.Text = "Update Rental"
         '
         'SearchRentalToolStripMenuItem
         '
         Me.SearchRentalToolStripMenuItem.Name = "SearchRentalToolStripMenuItem"
-        Me.SearchRentalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SearchRentalToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.SearchRentalToolStripMenuItem.Text = "Cancel Rental"
         '
         'CustomersToolStripMenuItem
@@ -294,12 +300,6 @@ Partial Class frmVehicles
         Me.cmbCategory.Name = "cmbCategory"
         Me.cmbCategory.Size = New System.Drawing.Size(121, 21)
         Me.cmbCategory.TabIndex = 59
-        '
-        'HomeToolStripMenuItem
-        '
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.HomeToolStripMenuItem.Text = "Home"
         '
         'frmVehicles
         '

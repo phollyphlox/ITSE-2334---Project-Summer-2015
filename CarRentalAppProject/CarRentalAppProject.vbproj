@@ -134,9 +134,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="new_Maverick_Car_RentalDataSet.vb">
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="PaymentInvoice.Designer.vb">
       <DependentUpon>PaymentInvoice.vb</DependentUpon>
@@ -173,6 +175,9 @@
     <EmbeddedResource Include="CustomerUpdate.resx">
       <DependentUpon>CustomerUpdate.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FinalizeInvoice.resx">
+      <DependentUpon>FinalizeInvoice.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentInvoice.resx">
       <DependentUpon>PaymentInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rental Update.resx">
+      <DependentUpon>Rental Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalCancel.resx">
+      <DependentUpon>RentalCancel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicles.resx">
       <DependentUpon>Vehicles.vb</DependentUpon>
@@ -211,14 +222,17 @@
     </Content>
     <None Include="new_Maverick_Car_RentalDataSet.xsc">
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="new_Maverick_Car_RentalDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>new_Maverick_Car_RentalDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="new_Maverick_Car_RentalDataSet.xss">
       <DependentUpon>new_Maverick_Car_RentalDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Car.jpg" />
   </ItemGroup>

@@ -32,7 +32,6 @@ Partial Class frmNewRental
         Me.lblCategoryCRA = New System.Windows.Forms.Label()
         Me.btnVehicleSearchCRA = New System.Windows.Forms.Button()
         Me.cmbCategoryCRA = New System.Windows.Forms.ComboBox()
-        Me.PriceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.New_Maverick_Car_RentalDataSet = New CarRentalAppProject.new_Maverick_Car_RentalDataSet()
         Me.lblPickupDateCRA = New System.Windows.Forms.Label()
         Me.VehicleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -40,18 +39,10 @@ Partial Class frmNewRental
         Me.dtpPickupDateCRA = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpReturnDateCRA = New System.Windows.Forms.DateTimePicker()
-        Me.PriceTableAdapter = New CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.PriceTableAdapter()
-        Me.PriceBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PriceRentalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RentalTableAdapter = New CarRentalAppProject.new_Maverick_Car_RentalDataSetTableAdapters.RentalTableAdapter()
-        Me.PriceRentalBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.PriceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.New_Maverick_Car_RentalDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VehicleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PriceBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PriceRentalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PriceRentalBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -114,18 +105,13 @@ Partial Class frmNewRental
         '
         'cmbCategoryCRA
         '
-        Me.cmbCategoryCRA.DataSource = Me.PriceBindingSource
+        Me.cmbCategoryCRA.DataSource = Me.VehicleBindingSource
         Me.cmbCategoryCRA.DisplayMember = "Category"
         Me.cmbCategoryCRA.FormattingEnabled = True
         Me.cmbCategoryCRA.Location = New System.Drawing.Point(120, 75)
         Me.cmbCategoryCRA.Name = "cmbCategoryCRA"
         Me.cmbCategoryCRA.Size = New System.Drawing.Size(121, 21)
         Me.cmbCategoryCRA.TabIndex = 8
-        '
-        'PriceBindingSource
-        '
-        Me.PriceBindingSource.DataMember = "Price"
-        Me.PriceBindingSource.DataSource = Me.New_Maverick_Car_RentalDataSet
         '
         'New_Maverick_Car_RentalDataSet
         '
@@ -177,28 +163,9 @@ Partial Class frmNewRental
         Me.dtpReturnDateCRA.Size = New System.Drawing.Size(151, 20)
         Me.dtpReturnDateCRA.TabIndex = 15
         '
-        'PriceTableAdapter
-        '
-        Me.PriceTableAdapter.ClearBeforeFill = True
-        '
-        'PriceBindingSource1
-        '
-        Me.PriceBindingSource1.DataMember = "Price"
-        Me.PriceBindingSource1.DataSource = Me.New_Maverick_Car_RentalDataSet
-        '
-        'PriceRentalBindingSource
-        '
-        Me.PriceRentalBindingSource.DataMember = "PriceRental"
-        Me.PriceRentalBindingSource.DataSource = Me.PriceBindingSource
-        '
         'RentalTableAdapter
         '
         Me.RentalTableAdapter.ClearBeforeFill = True
-        '
-        'PriceRentalBindingSource1
-        '
-        Me.PriceRentalBindingSource1.DataMember = "PriceRental"
-        Me.PriceRentalBindingSource1.DataSource = Me.PriceBindingSource
         '
         'frmNewRental
         '
@@ -218,12 +185,8 @@ Partial Class frmNewRental
         Me.Text = "Mavericks Car Rental Company - New Rental"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PriceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.New_Maverick_Car_RentalDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VehicleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PriceBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PriceRentalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PriceRentalBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -244,10 +207,5 @@ Partial Class frmNewRental
     Friend WithEvents dtpPickupDateCRA As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents dtpReturnDateCRA As DateTimePicker
-    Friend WithEvents PriceBindingSource As BindingSource
-    Friend WithEvents PriceTableAdapter As new_Maverick_Car_RentalDataSetTableAdapters.PriceTableAdapter
-    Friend WithEvents PriceRentalBindingSource As BindingSource
     Friend WithEvents RentalTableAdapter As new_Maverick_Car_RentalDataSetTableAdapters.RentalTableAdapter
-    Friend WithEvents PriceBindingSource1 As BindingSource
-    Friend WithEvents PriceRentalBindingSource1 As BindingSource
 End Class
