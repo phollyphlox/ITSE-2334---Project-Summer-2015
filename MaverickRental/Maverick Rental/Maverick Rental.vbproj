@@ -116,6 +116,9 @@
       <DependentUpon>MaverickDatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="MaverickDatabaseDataSet.vb">
+      <DependentUpon>MaverickDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

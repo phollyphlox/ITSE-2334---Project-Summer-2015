@@ -62,10 +62,6 @@
         Return total
     End Function
 
-    Private Sub dateRented_ValueChanged(sender As Object, e As EventArgs) Handles dateRented.ValueChanged
-
-    End Sub
-
     Private Sub dateReturned_ValueChanged(sender As Object, e As EventArgs) Handles dateReturned.ValueChanged
         returnValueChange = True
         getTotal(returnValueChange)
